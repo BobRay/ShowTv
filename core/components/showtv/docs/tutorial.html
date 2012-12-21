@@ -1,5 +1,7 @@
-<p>Sometimes you want to display the value of a TV that is not connected to the template of the current Resource. The ShowTv Snippet allows you to display any TV on any page, even if the TV is not connected to the current Resource in any way.
+<p>Sometimes you want to display the value of a TV that is not connected to the current Template and/or the current Resource. The ShowTv Snippet allows you to display any TV on any page, even if the TV is not connected to the current Resource in any way.
 </p>
+
+<p>Note that if you want some single value to be available throughout the site, the best way to do that is usually a System Setting (or a Context Setting). This Snippet is for when you have a TV that has different values for different Resources and want to show that TV's value for a particular Resource within some other Resource, Chunk, or Template.</p>
 
 <p>(Jump to <a href="[[~[[*id]]]]#propertiesTable">Properties Table</a>.)</p>
 
@@ -19,7 +21,7 @@ when it changes to "Downloaded," click on the "Finish" button. That should bring
 
 <p>The example above will show TV 12's value for Resource 14. The first two properties are required. The third is optional (it defaults to 0).</p>
 
-<p>If <fixedpre>&render=`1`</fixedpre>, the snippet tag will be replaced by the rendered value of the TV. If not, it will be replaced by the raw value of the TV. Showing the raw value is faster and will work in most cases.</p>
+<p>If <fixedpre>&render=`1`</fixedpre>, the snippet tag will be replaced by the rendered value of the TV (for example, a date TV with a specified format or an image TV). If not, it will be replaced by the raw value of the TV. Showing the raw value is faster and will work in many cases (e.g., a text TV).</p>
 
 <p>The name of the snippet and the properties are case-sensitive, so be careful to type them correctly or the snippet will not work.</p>
 
@@ -27,3 +29,29 @@ when it changes to "Downloaded," click on the "Finish" button. That should bring
 <a name="propertiesTable"></a>
 
 <h3>ShowTv Properties</h3>
+
+<table class="properties">
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+        <th>Default</th>
+    </tr>
+
+    <tr>
+        <td>resourceID</td>
+        <td>ID of the Resource you want the TV value for</td>
+        <td>(none)</td>
+    </tr>
+    <tr>
+        <td>tvID</td>
+        <td>ID of the TV
+        </td>
+        <td>(none)</td>
+    </tr>
+    <tr>
+        <td>render</td>
+        <td>Render the TV's output
+        </td>
+        <td>0</td>
+    </tr>
+</table>
