@@ -34,3 +34,19 @@
  * @package showtv
  **/
 
+
+/* ShowTv snippet */
+
+$rid = $modx->getOption('resourceID', $scriptProperties, '');
+$tvId = $modx->getOption('tvID', $scriptProperties, '');
+$render = $modx->getOption('render', $scriptProperties, false);
+
+$tv = $modx->getObject('modTemplateVar', $tvId);
+
+if ($tv) {
+    return $render
+        ? $tv->renderOutput($rid)
+        : $tv->getValue($rid);
+} else {
+    return "TV Not Found";
+}
