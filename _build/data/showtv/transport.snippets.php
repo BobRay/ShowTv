@@ -2,7 +2,7 @@
 /**
  * snippets transport file for ShowTv extra
  *
- * Copyright 2012 by Bob Ray <http://bobsguides.com>
+ * Copyright 2012 by Bob Ray <https://bobsguides.com>
  * Created on 12-20-2012
  *
  * @package showtv
