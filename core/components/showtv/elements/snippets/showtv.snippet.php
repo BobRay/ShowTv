@@ -2,7 +2,7 @@
 /**
  * ShowTv snippet for ShowTv extra
  *
- * Copyright 2012 by Bob Ray <https://bobsguides.com>
+ * Copyright 2012-2024 by Bob Ray <https://bobsguides.com>
  * Created on 12-20-2012
  *
  * ShowTv is free software; you can redistribute it and/or modify it under the
@@ -34,9 +34,7 @@
  * @package showtv
  **/
 
-
 /* ShowTv snippet */
-
 
 /* Make it run in either MODX 2 or MODX 3 */
 $prefix = $modx->getVersionData()['version'] >= 3
