@@ -2,7 +2,7 @@
 /**
  * snippets transport file for ShowTv extra
  *
- * Copyright 2012 by Bob Ray <https://bobsguides.com>
+ * Copyright 2012-2024 Bob Ray <https://bobsguides.com>
  * Created on 12-20-2012
  *
  * @package showtv
@@ -26,10 +26,12 @@ if (! function_exists('stripPhpTags')) {
 $snippets = array();
 
 $snippets[1] = $modx->newObject('modSnippet');
-$snippets[1]->fromArray(array(
-    'id' => '1',
-    'description' => 'Show any TV, anywhere',
-    'name' => 'ShowTv',
+$snippets[1]->fromArray(array (
+  'id' => 1,
+  'property_preprocess' => false,
+  'name' => 'ShowTv',
+  'description' => 'Show any TV, anywhere',
+  'properties' => NULL,
 ), '', true, true);
 $snippets[1]->setContent(file_get_contents($sources['source_core'] . '/elements/snippets/showtv.snippet.php'));
 
