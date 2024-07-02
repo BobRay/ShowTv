@@ -37,11 +37,17 @@
 
 /* ShowTv snippet */
 
+
+/* Make it run in either MODX 2 or MODX 3 */
+$prefix = $modx->getVersionData()['version'] >= 3
+  ? 'MODX\Revolution\\'
+  : '';
+
 $rid = $modx->getOption('resourceID', $scriptProperties, '');
 $tvId = $modx->getOption('tvID', $scriptProperties, '');
 $render = $modx->getOption('render', $scriptProperties, false);
 
-$tv = $modx->getObject('modTemplateVar', $tvId);
+$tv = $modx->getObject($prefix . 'modTemplateVar', $tvId);
 
 if ($tv) {
     return $render
