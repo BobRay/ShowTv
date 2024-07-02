@@ -4,7 +4,7 @@ ShowTv
 Author: Bob Ray <https://bobsguides.com>
 Copyright 2012
 
-ShowTv allows you to display any TV on any page, even if the TV is not connected to the current Resource in any way.
+ShowTv allows you to display any TV on any page, even if the TV is not connected to the current Resource or Template in any way.
 
 Official Documentation: https://bobsguides.com/showtv-tutorial.html
 

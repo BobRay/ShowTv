@@ -1,17 +1,15 @@
-<p>Sometimes you want to display the value of a Template Variable (TV) that is not connected to the current Template and/or the current Resource. The ShowTv Snippet allows you to display any TV on any page, even if the TV is not connected to the current Resource in any way.
+<p>Sometimes you want to display the value of a Template Variable (TV) that is not connected to the current Template and/or the current Resource. The ShowTv Snippet allows you to display any TV on any page, even if the TV is not connected to the current Resource or Template in any way.
 </p>
 
-<p>Note that if you want some single value to be available throughout the site, the best way to do that is usually a System Setting (or a Context Setting). This Snippet is for when you have a TV that has different values for different Resources and want to show that TV's value for a particular Resource within some other Resource, Chunk, or Template.</p>
+<p>Note that if you want some single value to be available throughout the site, the best way to do that is usually a System Setting (or a Context, Setting). This Snippet is for when you have a TV that has different values for different Resources and want to show that TV's value for a particular Resource within some other Resource, Chunk, or Template.</p>
 
 <p>(Jump to <a href="[[~[[*id]]]]#propertiesTable">Properties Table</a>.)</p>
 
 <h3>Installing ShowTv</h3>
 
 <p>
-Go to System | Package Management on the main menu in the MODX Manager and click on the "Download Extras" button. That will take you to the
-Revolution Repository (AKA Web Transport Facility). Put ShowTv in the search box and press Enter. Click on the "Download" button, and
-when it changes to "Downloaded," click on the "Finish" button. That should bring you back to your Package Management grid. Click on the
-"Install" button next to ShowTv in the grid. The ShowTv package should now be installed.</p>
+Go to Extras -> Installer on the main menu in the MODX Manager and click on the "Download Extras" button. That will take you to the
+Revolution Repository. Put ShowTv in the search box and press Enter.Click on the "Download" button. When the download is finished, click on the "Back to Package Management" button. That should bring you back to your Package Management grid. Click on "Install" next to ShowTv.</p>
 
 <h3>Usage</h3>
 
@@ -19,16 +17,19 @@ when it changes to "Downloaded," click on the "Finish" button. That should bring
 [[!ShowTv? &tvID=`12` &resourceID=`14` &render=`0`]]
 </fixedpre></pre>
 
-<p>The example above will show TV 12's value for Resource 14. The first two properties are required. The third is optional (it defaults to 0). The Resource ID is shown in parentheses after the Resource name in the Resource tree. The TV ID is shown in parentheses next to the TV name in the Element tree.</p>
+<p>The example above will show TV 12's raw value for Resource 14. The first two properties are required. The third is optional (it defaults to 0). The Resource ID is shown in parentheses after the Resource name in the Resource tree. The TV ID is shown in parentheses next to the TV name in the Element tree.</p>
 
 <p>If <fixedpre>&render=`1`</fixedpre>, the snippet tag will be replaced by the rendered value of the TV (for example, a date TV with a specified format or an image TV). If not, it will be replaced by the raw value of the TV. Showing the raw value is faster and will work in many cases (e.g., a text TV).</p>
 
-<p>The name of the snippet and the properties are case-sensitive, so be careful to type them correctly or the snippet will not work.</p>
+<div class="box">
+    <p>If you have TVs that contain sensitive information and Manager users who can edit Resources, remember that any such use will be able to see the value of those TVs if they know, or can guess the Resource ID and TV ID.</p>
+</div>
 
-
-<a name="propertiesTable"></a>
+<a id="propertiesTable"></a>
 
 <h3>ShowTv Properties</h3>
+
+<p>The properties are case-sensitive, so be careful to type them correctly.</p>
 
 <table class="properties">
     <tr>

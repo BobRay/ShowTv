@@ -8,4 +8,7 @@ ShowTv Extra for MODx Revolution
 
 **Bugs and Requests:** [ShowTv Issues](https://github.com/BobRay/ShowTv/issues)
 
-ShowTv allows you to display any TV on any page, even if the TV is not connected to the current Resource in any way.
+**Questions about using ShowTv** [MODx Forums](https://community.modx.com)
+
+
+ShowTv allows you to display the value of any TV on any page, even if the TV is not connected to the current Resource or Template in any way.
