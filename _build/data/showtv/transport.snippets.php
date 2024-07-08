@@ -31,7 +31,9 @@ $snippets[1]->fromArray(array (
   'property_preprocess' => false,
   'name' => 'ShowTv',
   'description' => 'Show any TV, anywhere',
-  'properties' => NULL,
+  'properties' => 
+  array (
+  ),
 ), '', true, true);
 $snippets[1]->setContent(file_get_contents($sources['source_core'] . '/elements/snippets/showtv.snippet.php'));
 
