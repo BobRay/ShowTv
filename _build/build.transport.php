@@ -84,7 +84,7 @@ set_time_limit(0);
 /* Instantiate MODx -- if this require fails, check your
  * _build/build.config.php file
  */
-require_once dirname(dirname(__FILE__)) . '/_build/build.config.php';
+require_once 'build.config.php';
 require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 $modx = new modX();
 $modx->initialize('mgr');
@@ -98,7 +98,7 @@ if (!defined('MODX_CORE_PATH')) {
 }
 
 @include dirname(__FILE__) . '/config/current.project.php';
-
+/** @var string $currentProject */
 if (!$currentProject) {
     die('Could not get current project');
 }
@@ -192,7 +192,7 @@ $helper->sendLog(modX::LOG_LEVEL_INFO, $modx->lexicon('mc_action')
     . ': ' . $modx->lexicon('mc_build')
     . "\n");
 $helper->sendLog(modX::LOG_LEVEL_INFO, $modx->lexicon('mc_created_package')
-    . ': ' . PKG_NAME_LOWER);
+    . ': ' . PKG_NAME_LOWER . ' '. PKG_VERSION . '-'. PKG_RELEASE);
 $helper->sendLog(modX::LOG_LEVEL_INFO, $modx->lexicon('mc_created_namespace')
     . ': ' . PKG_NAME_LOWER);
 /* load builder */
@@ -747,7 +747,7 @@ if ($hasMenu) {
 }
 
 /* Next-to-last step - pack in the license file, readme.txt, changelog,
- * and setup options 
+ * and setup options
  */
 $attr = array(
     'license' => file_get_contents($sources['docs'] . 'license.txt'),
