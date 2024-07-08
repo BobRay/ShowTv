@@ -43,6 +43,15 @@ $prefix = $modx->getVersionData()['version'] >= 3
 
 $rid = $modx->getOption('resourceID', $scriptProperties, '');
 $tvId = $modx->getOption('tvID', $scriptProperties, '');
+
+/* For debugging */
+
+/*
+$output .= '<br>Prefix: ' . $prefix . '<br>';
+$output .= '<br>TV ID: ' . $tvId . '<br>';
+$output .= '<br>Resource ID: ' . $rid . '<br>'; 
+*/
+
 $render = $modx->getOption('render', $scriptProperties, false);
 
 $tv = $modx->getObject($prefix . 'modTemplateVar', $tvId);
