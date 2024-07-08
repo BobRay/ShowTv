@@ -3,6 +3,7 @@ Changelog for ShowTv
 ShowTv 1.0.3-pl
 ---------------------------------
  - Updates for MODX 3
+ - Allow both TV ID and name to be used in property values
  - Improve documentation
 
 ShowTv 1.0.0

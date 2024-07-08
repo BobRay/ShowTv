@@ -17,9 +17,13 @@ Revolution Repository. Put ShowTv in the search box and press Enter.Click on the
 [[!ShowTv? &tvID=`12` &resourceID=`14` &render=`0`]]
 </fixedpre></pre>
 
-<p>The example above will show TV 12's raw value for Resource 14. The first two properties are required. The third is optional (it defaults to 0). The Resource ID is shown in parentheses after the Resource name in the Resource tree. The TV ID is shown in parentheses next to the TV name in the Element tree.</p>
+<p>The example above will show TV 12's raw value for Resource 14.  The first two properties are required. The third is optional (it defaults to 0). The Resource ID is shown in parentheses after the Resource name in the Resource tree. The TV ID is shown in parentheses next to the TV name in the Element tree.</p>
 
 <p>If <fixedpre>&render=`1`</fixedpre>, the snippet tag will be replaced by the rendered value of the TV (for example, a date TV with a specified format or an image TV). If not, it will be replaced by the raw value of the TV. Showing the raw value is faster and will work in many cases (e.g., a text TV).</p>
+
+<p>If the TV has no value for the specified Resource, the result will be empty unless the TV has a default value, in which case that will be used.</p>
+
+<p>Note that for some TV types, (e.g., date TVs) the non-rendered ("raw") value of the TV may not actually be the raw value from the database. MODX may alter those in the process of retrieving them.</p>
 
 <div class="box">
     <p>If you have TVs that contain sensitive information and Manager users who can edit Resources, remember that any such use will be able to see the value of those TVs if they know, or can guess the Resource ID and TV ID.</p>
@@ -45,7 +49,7 @@ Revolution Repository. Put ShowTv in the search box and press Enter.Click on the
     </tr>
     <tr>
         <td>tvID</td>
-        <td>ID of the TV
+        <td>Name or ID of the TV
         </td>
         <td>(none)</td>
     </tr>

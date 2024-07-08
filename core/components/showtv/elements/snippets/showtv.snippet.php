@@ -56,7 +56,11 @@ $output .= '<br>Resource ID: ' . $rid . '<br>';
 
 $render = $modx->getOption('render', $scriptProperties, false);
 
-$tv = $modx->getObject($prefix . 'modTemplateVar', $tvId);
+if (is_numeric($tvId)) {
+    $tv = $modx->getObject($prefix . 'modTemplateVar', $tvId);
+} else {
+    $tv = $modx->getObject($prefix . 'modTemplateVar', array('name' => $tvId));
+}
 
 if ($tv) {
     $output .= $render
