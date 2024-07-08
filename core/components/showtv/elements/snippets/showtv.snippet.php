@@ -41,6 +41,8 @@ $prefix = $modx->getVersionData()['version'] >= 3
   ? 'MODX\Revolution\\'
   : '';
 
+$output = '';
+
 $rid = $modx->getOption('resourceID', $scriptProperties, '');
 $tvId = $modx->getOption('tvID', $scriptProperties, '');
 
@@ -57,9 +59,11 @@ $render = $modx->getOption('render', $scriptProperties, false);
 $tv = $modx->getObject($prefix . 'modTemplateVar', $tvId);
 
 if ($tv) {
-    return $render
+    $output .=  $render
         ? $tv->renderOutput($rid)
         : $tv->getValue($rid);
 } else {
-    return "TV Not Found";
+    $output .=  "TV Not Found";
 }
+
+return $output;
