@@ -1,8 +1,9 @@
 Changelog for ShowTv
 
-ShowTv 1.0.3-pl
+ShowTv 1.1.3-pl
 ---------------------------------
  - Updates for MODX 3
+ - Updates for PHP 8
  - Allow both TV ID and name to be used in property values
  - Improve documentation
 
